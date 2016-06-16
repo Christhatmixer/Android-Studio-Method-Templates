@@ -12,7 +12,7 @@ public void ButtonOnClick(View v){
         *Name of Text View*.setText("Breanna is short");
     }
     else if(count == 3){
-        Breanna_Status.setText("Breanna is kind of cute");
+        *Name of Text View*.setText("Breanna is kind of cute");
         count =0;
     }
   }
