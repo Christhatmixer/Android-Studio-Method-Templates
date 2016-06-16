@@ -1,0 +1,18 @@
+
+//Used to display different text each click
+
+int count = 0;
+public void ButtonOnClick(View v){
+    count += 1;
+    TextView *Name Text View* = (TextView) findViewById(*Id of Text View*);
+    if (count == 1){
+        *Name of Text View*.setText("Breanna is cool");
+    }
+    else if(count == 2){
+        *Name of Text View*.setText("Breanna is short");
+    }
+    else if(count == 3){
+        Breanna_Status.setText("Breanna is kind of cute");
+        count =0;
+    }
+  }
