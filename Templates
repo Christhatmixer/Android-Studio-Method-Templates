@@ -68,3 +68,46 @@ if(website.contains("American Bully")){
 }
 
 
+//Shows fake loading screen before doing action
+
+Loading = (ProgressBar) findViewById((R.id.LoadingBar));
+Loading.setVisibility(View.GONE);
+checkMood.setOnLongClickListener(new Button.OnLongClickListener(){
+    public boolean onLongClick(View v){
+        final Handler handler = new Handler();
+        Loading.setVisibility(View.VISIBLE);
+
+        final Runnable r = new Runnable() {
+            public void run() {
+
+
+                int mood = moodChoice.nextInt(39);
+                //handler.postDelayed(this, 3000);
+
+                if (mood > 0 && mood <= 10) {
+                    MoodName.setText("sad");
+                    mContentView.setBackgroundColor(Color.BLUE);
+                    Loading.setVisibility(View.GONE);
+                } else if (mood >= 11 && mood <= 19) {
+                    MoodName.setText("happy");
+                    mContentView.setBackgroundColor(Color.YELLOW);
+                    Loading.setVisibility(View.GONE);
+                } else if (mood >= 20 && mood <= 29) {
+                    MoodName.setText("Angry");
+                    mContentView.setBackgroundColor(Color.RED);
+                    Loading.setVisibility(View.GONE);
+                } else if (mood >= 30 && mood <= 39) {
+                    MoodName.setText("Mellow");
+                    mContentView.setBackgroundColor(Color.DKGRAY);
+                    Loading.setVisibility(View.GONE);
+                }
+            }
+        };
+
+        handler.postDelayed(r, 3000);
+
+
+
+        return true;
+    }
+});
