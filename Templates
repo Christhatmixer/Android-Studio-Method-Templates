@@ -111,3 +111,27 @@ checkMood.setOnLongClickListener(new Button.OnLongClickListener(){
         return true;
     }
 });
+
+
+//Changing Text based on Radio Group selection
+
+Gender.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+    @Override
+    public void onCheckedChanged(RadioGroup group, int checkedId) {
+        if(checkedId == R.id.male){
+            Question3.setText(getResources().getString(R.string.Q3M));
+            Question7.setText(getResources().getString(R.string.Q7M));
+            Question10.setText(getResources().getString(R.string.Q10M));
+            Question11.setText(getResources().getString(R.string.Q11M));
+            Question12.setText(getResources().getString(R.string.Q12M));
+        }
+        else if(checkedId == R.id.female){
+            Question3.setText(getResources().getString(R.string.Q3F));
+            Question7.setText(getResources().getString(R.string.Q7F));
+            Question10.setText(getResources().getString(R.string.Q10F));
+            Question11.setText(getResources().getString(R.string.Q11F));
+            Question12.setText(getResources().getString(R.string.Q12F));
+        }
+
+    }
+});
