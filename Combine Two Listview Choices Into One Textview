@@ -1,0 +1,16 @@
+int count = 0;
+CharSequence BreedChoice;
+CharSequence BreedChoice2;
+public void addButton(View v){
+    if (count == 0){
+        BreedChoice = crossBreed.getText();
+        MixChoices.setText(BreedChoice);
+        count += 1;
+    }else if(count == 1){
+        BreedChoice2 = crossBreed.getText();
+        MixChoices.setText(BreedChoice + " " + BreedChoice2);
+        count = 0;
+
+    }
+
+}
