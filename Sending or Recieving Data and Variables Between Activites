@@ -1,0 +1,14 @@
+//sending data/variables to a serparate activity and starting it
+String variable = TextView.getText().toString();
+Intent Info = new Intent(v.getContext(),ChosenClass.class);
+if (pageChoice.contains("this text")&& pageChoice.contains("This text")){
+    Site = "American Bully";
+    Info.putExtra("test",Site);
+    startActivity(Info);
+
+//recieving data/variables from a serparate activity and starting it
+Intent intent = getIntent();
+String website = intent.getStringExtra("test");
+if(website.contains("This Text")){
+    dogSite.loadUrl("URL");
+}
