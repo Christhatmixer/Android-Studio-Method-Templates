@@ -1,3 +1,5 @@
+//Asumes fabric is fully setup
+
 TwitterAuthConfig authConfig =  new TwitterAuthConfig("consumer key", "cnsumer secret key");
 Fabric.with(this, new TwitterCore(authConfig), new TweetComposer());
 final TweetComposer.Builder builder = new TweetComposer.Builder(this)
